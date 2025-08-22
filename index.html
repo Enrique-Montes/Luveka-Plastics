@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Luveka PLastics</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo">♻️ Luveka Plastics ♻️</div>
+    <nav>
+      <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#nosotros">Nosotros</a></li>
+        <li class="submenu">
+          <a href="#servicios">Servicios ▾</a>
+          <ul class="submenu-items">
+              <li><a href="#">Compra</a></li>
+              <li><a href="#">Venta</a></li>
+              <li><a href="#">Reciclaje</a></li>
+          </ul>
+        </li>
+        <li><a href="#contacto" class="btn-nav">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section id="inicio" class="hero">
+    <div class="overlay"></div>
+    <div class="hero-content">
+      <h1 data-animate="fade-up">Luveka Plastics</h1>
+      <p data-animate="fade-up">S.A. de C.V. de R.L.</p>
+      <!--<a href="#expo" class="btn" data-animate="fade-up">Nos vemos en la Expo</a>-->
+    </div>
+  </section>
+
+  <!-- Nosotros -->
+  <section id="nosotros" class="section fade-in">
+    <h2>Quiénes Somos</h2>
+    <p>En <strong>EcoPlast</strong>, convertimos residuos plásticos en materias primas de alta calidad para la industria. Nuestro compromiso es con la sostenibilidad y la innovación.</p>
+  </section>
+
+  <!-- Servicios -->
+  <section id="servicios" class="section fade-in">
+    <h2>Nuestros Servicios</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>♻ Reciclaje de PET</h3>
+        <p>Transformamos botellas en gránulos listos para la industria.</p>
+      </div>
+      <div class="card">
+        <h3>🛢 Reciclaje de HDPE</h3>
+        <p>Procesamos HDPE para envases, tuberías y más.</p>
+      </div>
+      <div class="card">
+        <h3>🌍 Consultoría Ambiental</h3>
+        <p>Asesoría en gestión de residuos y economía circular.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Expo -->
+  <section id="expo" class="expo section fade-in">
+    <h2>Expo Alemania 2025</h2>
+    <p><strong>Stand 45B</strong> · Messe Frankfurt, Alemania</p>
+    <p><strong>10-12 Septiembre 2025</strong></p>
+    <a href="#contacto" class="btn">Agendar reunión</a>
+  </section>
+
+  <!-- Contacto -->
+  <section id="contacto" class="section fade-in">
+    <h2>Contacto</h2>
+    <form id="contactForm">
+      <input type="text" placeholder="Nombre" required>
+      <input type="email" placeholder="Email" required>
+      <textarea placeholder="Mensaje" required></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 EcoPlast Reciclaje · Todos los derechos reservados</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
