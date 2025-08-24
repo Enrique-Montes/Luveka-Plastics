@@ -9,7 +9,21 @@ body {
   color: #333;
   line-height: 1.6;
 }
-
+/* Secciones estilos */
+.section {
+  padding: 5rem 8%;
+  text-align: center;
+}
+.section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: black;
+  letter-spacing: 3px;
+}
+.section p {
+  max-width: 700px;
+  margin: auto;
+}
 /* Header */
 header {
   position: fixed;
@@ -43,7 +57,7 @@ header nav ul {
   position: absolute;
   top: 100%;
   left: 0;
-  background-color: #fff; /* color de fondo del submenu */
+  background-color: #242424b5; /* color de fondo del submenu */
   padding: 0;
   margin: 0;
   list-style: none;
@@ -60,12 +74,11 @@ header nav ul {
   display: block;
   padding: 10px 15px;
   text-decoration: none;
-  color: #333;
+  color: #fff;
 }
 .submenu-items li a:hover {
-  background-color: #f0f0f0;
+  background-color: #232222;
 }
-
 /* Mostrar el submenu al pasar el mouse */
 .submenu:hover .submenu-items {
   display: block;
@@ -76,14 +89,9 @@ header nav a {
   transition: color 0.3s;
 }
 header nav a:hover {
-  color: black;
+  color: green;
 }
-.btn-nav {
-  background: green;
-  padding: 0.5rem 1rem;
-  border-radius: 20px;
-  font-weight: 500;
-}
+
 
 /* Hero */
 .hero {
@@ -107,10 +115,14 @@ header nav a:hover {
   z-index: 1;
 }
 .hero h1  {
-  font-size: 3rem;
+  font-size: 4rem;
   letter-spacing: 3px;
 }
-.btn {
+.hero p {
+  font-size: 24px;
+  letter-spacing: 2px;
+}
+/*.btn {
   display: inline-block;
   margin-top: 1rem;
   padding: 0.8rem 2rem;
@@ -122,22 +134,158 @@ header nav a:hover {
 }
 .btn:hover {
   background: #00a86b;
-}
+}*/
 
-/* Secciones */
-.section {
+
+/* Cards de servicios / incio */
+.servicios-pro {
   padding: 5rem 8%;
   text-align: center;
+  /*background: #f9f9f9;*/
 }
-.section h2 {
-  font-size: 2rem;
+.servicios-pro h2 {
+  font-size: 2.2rem;
+  margin-bottom: 3rem;
+}
+.servicios-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+.servicio {
+  background: linear-gradient(145deg, #3e9c4b, #f1f1f1);
+  border-radius: 25px;
+  padding: 2rem;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.6);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.servicio:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
+.icono {
+  font-size: 3rem;
   margin-bottom: 1rem;
   color: #00a86b;
 }
-.section p {
-  max-width: 700px;
-  margin: auto;
+
+/* --- 360 Recycling --- */
+.recycling360 {
+  padding: 60px 20px;
+  text-align: center;
 }
+.recycling360 h2 {
+  font-size: 2.2rem;
+  margin-bottom: 16px;
+  letter-spacing: 2px;
+}
+.recycling360 p {
+  max-width: 820px;
+  margin: 0 auto 28px;
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+/* Carrusel núcleo */
+.carousel {
+  overflow: hidden;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.carousel-track {
+  display: flex;
+  will-change: transform;
+  transition: transform 0.5s ease-in-out;
+}
+.step {
+  min-width: 100%; /* 1 slide por vista */
+  background: #dbdbdb;
+  padding: 40px 22px;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+.step .icon {
+  font-size: 2.6rem;
+  margin-bottom: 12px;
+}
+.step h3 {
+  font-size: 1.4rem;
+  margin-bottom: 8px;
+  color: #2c7a4b;
+}
+
+/* Controles */
+.carousel-controls {
+  margin-top: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+}
+.carousel-controls button {
+  background: #2c7a4b;
+  border: none;
+  color: #fff;
+  font-size: 1.2rem;
+  padding: 10px 18px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background 0.25s;
+}
+.carousel-controls button:hover {
+  background: #256d3c;
+}
+
+/* Dots/paginación */
+.dots {
+  display: flex;
+  gap: 8px;
+}
+.dots button {
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  border: none;
+  background: #b9e4c6;
+  cursor: pointer;
+}
+.dots button[aria-selected="true"] {
+  background: #2c7a4b;
+  transform: scale(1.15);
+}
+
+/* Asegura que nada lo tape (por header fijo) */
+#recycling360 { scroll-margin-top: 90px; }
+
+
+
+.servicio h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.8rem;
+  color: #333;
+}
+
+.servicio p {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 1.5rem;
+}
+
+.btn-pro {
+  display: inline-block;
+  background: #00d084;
+  color: white;
+  padding: 0.6rem 1.5rem;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+.btn-pro:hover {
+  background: #008f5a;
+}
+
 
 /* Cards */
 .cards {
@@ -159,12 +307,6 @@ header nav a:hover {
   transform: translateY(-8px);
 }
 
-/* Expo */
-.expo {
-  background: #f0fdf4;
-  border-top: 5px solid #00d084;
-  border-bottom: 5px solid #00d084;
-}
 
 /* Contacto */
 form {
@@ -192,6 +334,286 @@ form button:hover {
   background: #00a86b;
 }
 
+
+
+
+
+
+
+
+
+/* PAGINA NOSOTROS */
+/* Hero Nosotros */
+/* Hero Video */
+.hero-video {
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero-video-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(46, 139, 87, 0.6); /* verde semitransparente */
+  z-index: 2;
+}
+
+.hero-video .hero-content {
+  position: relative;
+  z-index: 3;
+  color: #fff;
+  max-width: 800px;
+  padding: 0 20px;
+}
+
+.hero-video h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.hero-video p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.hero-video .btn {
+  display: inline-block;
+  padding: 12px 30px;
+  background: #2e8b57;
+  color: white;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.3s;
+}
+
+.hero-video .btn:hover {
+  background: #246b45;
+}
+
+/* Responsive */
+@media(max-width:768px){
+  .hero-video h1 {
+    font-size: 2rem;
+  }
+  .hero-video p {
+    font-size: 1rem;
+  }
+}
+
+
+/* Historia */
+.historia .container {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  padding: 80px 50px;
+}
+.historia .text {
+  flex: 1;
+  min-width: 300px;
+}
+.historia .text h2 {
+  color: #2e8b57;
+  margin-bottom: 20px;
+}
+.historia .text p {
+  font-size: 1rem;
+  color: #555;
+}
+.historia .image {
+  flex: 1;
+  min-width: 300px;
+}
+.historia .image img {
+  width: 100%;
+  border-radius: 15px;
+}
+
+/* Misión, Visión, Valores */
+.mis-valores .container-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  padding: 50px;
+}
+.mis-valores .card {
+  background: white;
+  border-radius: 15px;
+  padding: 30px 20px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.mis-valores .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+.mis-valores .icon {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+.mis-valores h3 {
+  color: #2e8b57;
+  margin-bottom: 15px;
+}
+.mis-valores p {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.5;
+}
+.mis-valores ul {
+  list-style: none;
+  padding-left: 0;
+  color: #555;
+  font-size: 0.95rem;
+}
+.mis-valores ul li {
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Sección Responsabilidad Social & Impacto */
+.impacto {
+  background: #f0fff0;
+  padding: 80px 50px;
+  text-align: center;
+}
+.impacto h2 {
+  color: #2e8b57;
+  margin-bottom: 20px;
+}
+.impacto p {
+  max-width: 700px;
+  margin: 0 auto 50px auto;
+  color: #555;
+  font-size: 1rem;
+}
+.impacto-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+.impacto-card {
+  background: white;
+  border-radius: 15px;
+  padding: 30px 20px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.impacto-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+.impacto-card .icon {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+.impacto-card h3 {
+  color: #2e8b57;
+  margin-bottom: 10px;
+}
+.impacto-card p {
+  color: #555;
+  font-size: 0.95rem;
+}
+
+/* Sección Permisos y Certificaciones */
+.permisos {
+  background: #ffffff;
+  padding: 80px 50px;
+  text-align: center;
+}
+.permisos h2 {
+  color: #2e8b57;
+  margin-bottom: 20px;
+}
+.permisos p {
+  max-width: 700px;
+  margin: 0 auto 50px auto;
+  color: #555;
+  font-size: 1rem;
+}
+.permisos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+}
+.permiso-card {
+  background: #f9f9f9;
+  border-radius: 15px;
+  padding: 30px 20px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  transition: transform 0.3s, box-shadow 0.3s;
+  text-align: center;
+}
+.permiso-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+.permiso-card img {
+  width: 80px;
+  margin-bottom: 15px;
+}
+.permiso-card h3 {
+  color: #2e8b57;
+  font-size: 1rem;
+}
+
+
+/* Responsive */
+@media(max-width:768px){
+  .historia .container {
+    flex-direction: column-reverse;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* Footer */
 footer {
   background: #111;
@@ -200,16 +622,6 @@ footer {
   padding: 1rem;
 }
 
-/* Animaciones */
-.fade-in {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: all 0.8s ease;
-}
-.fade-in.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
 
 /* Responsive */
 @media (max-width: 768px) {
