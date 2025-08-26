@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Luveka PLastics</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo">♻️ Luveka Plastics ♻️</div>
+    <nav>
+      <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li class="submenu">
+          <a href="#servicios">Servicios ▾</a>
+          <ul class="submenu-items">
+              <li><a href="#">Compra</a></li>
+              <li><a href="#">Venta</a></li>
+              <li><a href="#">Reciclaje</a></li>
+          </ul>
+        </li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section id="inicio" class="hero">
+    <div class="overlay"></div>
+    <div class="hero-content">
+      <h1 data-animate="fade-up">Luveka Plastics</h1>
+      <p data-animate="fade-up">S. de R.L. de C.V.</p>
+      <!--<a href="#expo" class="btn" data-animate="fade-up">Nos vemos en la Expo</a>-->
+    </div>
+  </section>
+
+  <!-- Cards Servicios / inicio-->
+  <section class="servicios-pro">
+  <h2>Nuestros Servicios</h2>
+  <div class="servicios-grid">
+    
+    <div class="servicio">
+      <div class="icono">💼</div>
+      <h3>Venta</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur tempore molestias</p>
+      <a href="#" class="btn-pro">Conocer más</a>
+    </div>
+
+    <div class="servicio">
+      <div class="icono">♻️</div>
+      <h3>Reciclaje</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur tempore molestias</p>
+      <a href="#" class="btn-pro">Conocer más</a>
+    </div>
+
+    <div class="servicio">
+      <div class="icono">🛒</div>
+      <h3>Compra</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur tempore molestias</p>
+      <a href="#" class="btn-pro">Conocer más</a>
+    </div>
+
+    <div class="servicio">
+      <div class="icono">🌍</div>
+      <h3>Compromiso</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur tempore molestias</p>
+      <a href="#" class="btn-pro">Conocer más</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- 360 Recycling -->
+<section id="recycling360" class="section fade-in recycling360">
+  <h2>Economia Circular</h2>
+  <p>En <strong>Luveka Plastics</strong> trabajamos para garantizar el reciclaje total del plástico. Apostamos por la economía circular como alternativa a la lineal, reutilizando materiales, reduciendo el consumo energético y diseñando productos que puedan rehacerse con el uso de energías renovables.</p>
+
+  <div class="carousel" aria-live="polite">
+    <div class="carousel-track">
+      <article class="step" aria-roledescription="slide">
+        <div class="icon">🚛</div>
+        <h3>Recolección</h3>
+        <p>Acopiamos materiales plásticos de industrias y comunidades.</p>
+      </article>
+      <article class="step" aria-roledescription="slide">
+        <div class="icon">🏭</div>
+        <h3>Transformación</h3>
+        <p>Convertimos residuos en materia prima de alta calidad.</p>
+      </article>
+      <article class="step" aria-roledescription="slide">
+        <div class="icon">📦</div>
+        <h3>Reutilización</h3>
+        <p>Reintegramos materiales reciclados a la cadena productiva.</p>
+      </article>
+      <article class="step" aria-roledescription="slide">
+        <div class="icon">🌱</div>
+        <h3>Sostenibilidad</h3>
+        <p>Impacto medible y positivo para el medio ambiente.</p>
+      </article>
+    </div>
+  </div>
+
+  <div class="carousel-controls">
+    <button id="prev" aria-label="Anterior">⬅️</button>
+    <div class="dots" role="tablist" aria-label="Paginación"></div>
+    <button id="next" aria-label="Siguiente">➡️</button>
+  </div>
+</section>
+
+
+  <!-- Nosotros 
+  <section id="nosotros" class="section fade-in">
+    <h2>Quiénes Somos</h2>
+    <p>En <strong>EcoPlast</strong>, convertimos residuos plásticos en materias primas de alta calidad para la industria. Nuestro compromiso es con la sostenibilidad y la innovación.</p>
+  </section>-->
+
+  <!-- Servicios 
+  <section id="servicios" class="section fade-in">
+    <h2>Nuestros Servicios</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>♻ Reciclaje de PET</h3>
+        <p>Transformamos botellas en gránulos listos para la industria.</p>
+      </div>
+      <div class="card">
+        <h3>🛢 Reciclaje de HDPE</h3>
+        <p>Procesamos HDPE para envases, tuberías y más.</p>
+      </div>
+      <div class="card">
+        <h3>🌍 Consultoría Ambiental</h3>
+        <p>Asesoría en gestión de residuos y economía circular.</p>
+      </div>
+    </div>
+  </section>-->
+
+  <!-- Contacto -->
+  <section id="contacto" class="section fade-in">
+    <h2>Contactanos</h2>
+    <form id="contactForm">
+      <input type="text" placeholder="Nombre" required>
+      <input type="email" placeholder="Email" required>
+      <input type="tel" placeholder="Telefono" required>
+      <select>
+            <option disabled selected>-- Seleccione un asunto --</option>
+            <option>Quiero Comprar</option>
+            <option>Quiero Vender</option>
+        </select>
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Luveka Plastics · Todos los derechos reservados</p>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

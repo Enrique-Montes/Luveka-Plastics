@@ -1,3 +1,7 @@
+/* Paleta de colores */
+:root {
+  --color-secundario: green;
+}
 /* Fuente y reset */
 * {
   margin: 0;
@@ -258,19 +262,17 @@ header nav a:hover {
 #recycling360 { scroll-margin-top: 90px; }
 
 
-
+/* Nuestros Servicios Cards */
 .servicio h3 {
   font-size: 1.4rem;
   margin-bottom: 0.8rem;
   color: #333;
 }
-
 .servicio p {
   font-size: 0.95rem;
   color: #555;
   margin-bottom: 1.5rem;
 }
-
 .btn-pro {
   display: inline-block;
   background: #00d084;
@@ -281,33 +283,9 @@ header nav a:hover {
   font-weight: 600;
   transition: background 0.3s;
 }
-
 .btn-pro:hover {
   background: #008f5a;
 }
-
-
-/* Cards */
-.cards {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 2rem;
-  margin-top: 2rem;
-}
-.card {
-  background: #f9f9f9;
-  padding: 2rem;
-  border-radius: 15px;
-  width: 250px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-  transition: transform 0.3s;
-}
-.card:hover {
-  transform: translateY(-8px);
-}
-
-
 /* Contacto */
 form {
   max-width: 500px;
@@ -348,14 +326,13 @@ form button:hover {
 .hero-video {
   position: relative;
   width: 100%;
-  height: 80vh;
+  height: 60vh;
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
 }
-
 .hero-video-bg {
   position: absolute;
   top: 0;
@@ -365,14 +342,12 @@ form button:hover {
   object-fit: cover;
   z-index: 1;
 }
-
 .hero-overlay {
   position: absolute;
   inset: 0;
   background: rgba(46, 139, 87, 0.6); /* verde semitransparente */
   z-index: 2;
 }
-
 .hero-video .hero-content {
   position: relative;
   z-index: 3;
@@ -380,17 +355,14 @@ form button:hover {
   max-width: 800px;
   padding: 0 20px;
 }
-
 .hero-video h1 {
   font-size: 3rem;
   margin-bottom: 20px;
 }
-
 .hero-video p {
   font-size: 1.2rem;
   margin-bottom: 30px;
 }
-
 .hero-video .btn {
   display: inline-block;
   padding: 12px 30px;
@@ -401,7 +373,6 @@ form button:hover {
   font-weight: 500;
   transition: background 0.3s;
 }
-
 .hero-video .btn:hover {
   background: #246b45;
 }
@@ -417,88 +388,127 @@ form button:hover {
 }
 
 
-/* Historia */
+/* Nuestra Empresa */
 .historia .container {
   display: flex;
   align-items: center;
   gap: 40px;
   flex-wrap: wrap;
-  padding: 80px 50px;
+  padding: 50px 50px;
 }
 .historia .text {
   flex: 1;
   min-width: 300px;
 }
 .historia .text h2 {
-  color: #2e8b57;
+  color: var(--color-secundario);
   margin-bottom: 20px;
+  letter-spacing: 3px;
 }
 .historia .text p {
   font-size: 1rem;
   color: #555;
 }
+.historia .text p strong {
+  color: black;
+}
 .historia .image {
   flex: 1;
   min-width: 300px;
 }
-.historia .image img {
-  width: 100%;
-  border-radius: 15px;
+.section.historia .image img {
+  width: 350px;      /* tamaño del círculo */
+  height: 350px;     /* mantiene proporción */
+  object-fit: cover; /* recorta sin deformar */
+  border-radius: 70%; /* círculo perfecto */
+  /*border: 4px solid #ddd; /* borde opcional */
+  /*box-shadow: 0 4px 10px rgba(0,0,0,0.15);*/
 }
 
-/* Misión, Visión, Valores */
-.mis-valores .container-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 30px;
-  padding: 50px;
+/* Cards Mision, Vision, Vaslores*/
+.card h3{
+  font-size: 25px;
+  color: var(--color-secundario);
+  padding: 5px;
 }
-.mis-valores .card {
-  background: white;
-  border-radius: 15px;
-  padding: 30px 20px;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-  text-align: center;
-  transition: transform 0.3s, box-shadow 0.3s;
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 1rem;
 }
-.mis-valores .card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+.card {
+  background: #f9f9f9;
+  padding: 1rem;
+  border-radius: 10%;
+  width: 300px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+  transition: transform 0.3s;
 }
-.mis-valores .icon {
-  font-size: 2.5rem;
-  margin-bottom: 15px;
+.card:hover {
+  transform: translateY(-15px);
 }
-.mis-valores h3 {
-  color: #2e8b57;
-  margin-bottom: 15px;
+
+/* Sección Responsabilidad Ambiental */
+.section.impacto {
+  padding: 80px 20px;
 }
-.mis-valores p {
-  font-size: 0.95rem;
-  color: #555;
-  line-height: 1.5;
-}
-.mis-valores ul {
-  list-style: none;
-  padding-left: 0;
-  color: #555;
-  font-size: 0.95rem;
-}
-.mis-valores ul li {
-  margin-bottom: 8px;
+.section.impacto .container {
   display: flex;
   align-items: center;
-  gap: 10px;
+  justify-content: space-between;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
 }
+.section.impacto .impacto-texto {
+  flex: 1;
+  min-width: 280px;
+}
+.section.impacto .impacto-texto h2 {
+  font-size: 2rem;
+  color: var(--color-secundario);
+  margin-bottom: 20px;
+}
+.section.impacto .impacto-texto p {
+  margin-bottom: 15px;
+  line-height: 1.7;
+  color: #333;
+}
+.section.impacto .impacto-imagen {
+  flex: 1;
+  min-width: 280px;
+  text-align: center;
+}
+.section.impacto .impacto-imagen img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .section.impacto .container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .section.impacto .impacto-texto h2 {
+    font-size: 1.6rem;
+  }
+}
+
 
 /* Sección Responsabilidad Social & Impacto */
 .impacto {
-  background: #f0fff0;
   padding: 80px 50px;
   text-align: center;
 }
 .impacto h2 {
-  color: #2e8b57;
+  color: var(--color-secundario);
   margin-bottom: 20px;
 }
 .impacto p {
@@ -536,14 +546,13 @@ form button:hover {
   font-size: 0.95rem;
 }
 
-/* Sección Permisos y Certificaciones */
+/* Sección Permisos */
 .permisos {
-  background: #ffffff;
   padding: 80px 50px;
   text-align: center;
 }
 .permisos h2 {
-  color: #2e8b57;
+  color: var(--color-secundario);
   margin-bottom: 20px;
 }
 .permisos p {
@@ -555,27 +564,30 @@ form button:hover {
 .permisos-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 30px;
+  gap: 40px;
+  justify-content: center;
+  max-width: 800px;
+  margin: 0 auto;
 }
 .permiso-card {
-  background: #f9f9f9;
-  border-radius: 15px;
+  background: #c9c3c3;
+  border-radius: 10%;
   padding: 30px 20px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
   transition: transform 0.3s, box-shadow 0.3s;
   text-align: center;
 }
 .permiso-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
 }
 .permiso-card img {
-  width: 80px;
+  width: 100px;
   margin-bottom: 15px;
 }
 .permiso-card h3 {
-  color: #2e8b57;
-  font-size: 1rem;
+  color: var(--color-secundario);
+  font-size: 1.5rem;
 }
 
 
@@ -619,7 +631,7 @@ footer {
   background: #111;
   color: white;
   text-align: center;
-  padding: 1rem;
+  padding: 2rem;
 }
 
 
