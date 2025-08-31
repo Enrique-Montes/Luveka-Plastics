@@ -313,20 +313,12 @@ form button:hover {
 }
 
 
-
-
-
-
-
-
-
-/* PAGINA NOSOTROS */
-/* Hero Nosotros */
+/*//////// PAGINA NOSOTROS /////////*/
 /* Hero Video */
 .hero-video {
   position: relative;
   width: 100%;
-  height: 60vh;
+  height: 70vh;
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -570,7 +562,7 @@ form button:hover {
   margin: 0 auto;
 }
 .permiso-card {
-  background: #c9c3c3;
+  background: #bdbdbd;
   border-radius: 10%;
   padding: 30px 20px;
   box-shadow: 0 5px 15px rgba(0,0,0,0.3);
@@ -599,11 +591,187 @@ form button:hover {
 }
 
 
+/*//////// PAGINA DE COMPRAR ////////*/
+/* Hero Compras */
+.hero-compras {
+  position: relative;
+  height: 80vh;
+  background: url('../img/tarima_termo.jpg') no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+}
+.hero-compras .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.7);
+}
+.hero-compras .hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  padding: 20px;
+}
+.hero-compras h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.hero-compras p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+/* Sección Cards Productos */
+.productos {
+  padding: 60px 20px;
+  background: #f9f9f9;
+  text-align: center;
+}
+.productos h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: var(--color-secundario);
+}
+.productos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 15px;
+}
+.producto-card {
+  background: #fff;
+  padding: 25px;
+  border-radius: 45px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.5);
+  transition: transform 0.3s ease;
+}
+.producto-card:hover {
+  transform: translateY(-10px);
+}
+.producto-img img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  border: 4px solid #eee;
+}
+.producto-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+  color: #222;
+}
+.producto-card p {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 15px;
+}
+.producto-detalles h4 {
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+  color: #444;
+}
+.producto-detalles ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 0.95rem;
+  color: #555;
+}
+.producto-detalles ul li {
+  margin-bottom: 6px;
+}
 
 
+/*/////// PAGINA VENTAS ///////*/
+/* Hero Ventas */
+.hero-ventas {
+  position: relative;
+  height: 70vh;
+  background: url('https://images.pexels.com/photos/3735232/pexels-photo-3735232.jpeg') no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+}
+.hero-ventas .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+}
+.hero-ventas .hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  padding: 20px;
+}
+.hero-ventas h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.hero-ventas p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
 
-
-
+/* Materiales en Venta */
+.materiales-venta {
+  padding: 60px 50px;
+  background: #f9f9f9;
+  text-align: center;
+}
+.materiales-venta h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+.materiales-venta p {
+  font-size: 1.1rem;
+  margin-bottom: 40px;
+  color: #666;
+}
+.grid-materiales {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+.card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+  transition: transform 0.3s;
+}
+.card:hover {
+  transform: translateY(-5px);
+}
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+.card h3 {
+  margin: 15px 0 10px;
+  font-size: 1.5rem;
+  color: #333;
+}
+.card p {
+  padding: 0 15px 20px;
+  font-size: 1rem;
+  color: #555;
+}
 
 
 
