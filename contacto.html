@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Luveka Plastics</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+     <!-- Header -->
+  <header>
+    <div class="logo">♻️ Luveka Plastics ♻️</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li class="submenu">
+          <a href="#servicios">Servicios ▾</a>
+          <ul class="submenu-items">
+            <li><a href="compras.html">Compra</a></li>
+            <li><a href="ventas.html">Venta</a></li>
+            <li><a href="reciclaje.html">Reciclaje</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+<!-- Sección Contacto Reciclaje y Maquila -->
+<section id="contacto-reciclaje" class="form-contacto">
+  <h2>Contáctanos</h2>
+  <p>Déjanos tus datos y cuéntanos qué tipo de material o servicio necesitas.</p>
+
+  <form action="mailto:trejovero@yahoo.com.mx" method="POST" class="form-reciclaje">
+    <input type="text" name="nombre" placeholder="Tu nombre completo" required>
+    <input type="email" name="email" placeholder="Tu correo electrónico" required>
+    <input type="tel" name="telefono" placeholder="Tu teléfono (opcional)">
+    
+    <label for="tipo">Tipo de consulta:</label>
+    <select name="tipo" id="tipo" required>
+      <option value="" disabled selected>Selecciona una opción</option>
+      <option value="venta">Venta de material.</option>
+      <option value="compra">Compra de material.</option>
+      <option value="maquila">Servicios de máquila.</option>
+    <!--<option value="otros">Otros</option>-->
+    </select>
+
+    <textarea name="mensaje" placeholder="Cuéntanos los detalles de tu solicitud..." rows="4" required></textarea>
+
+    <button type="submit">Enviar Solicitud</button>
+  </form>
+</section>
+
+
+<!-- Botón flotante WhatsApp con opciones -->
+<div class="whatsapp-float-container">
+  <div class="whatsapp-main" onclick="toggleWhatsAppMenu()">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+  </div>
+  <div class="whatsapp-options">
+    <a href="https://wa.me/524424139226?text=Hola,%20quiero%20información%20de%20ventas" target="_blank">Ventas</a>
+    <a href="https://wa.me/524424449671" target="_blank">Compras</a>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer>
+    <p>&copy; 2025 Luveka Plastics · Todos los derechos reservados</p>
+</footer>
+
+<script src="main.js"></script>
+
+</body>
+</html>

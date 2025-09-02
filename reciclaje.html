@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reciclaje - Luveka Plastics</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Header -->
+<header>
+    <div class="logo">♻️ Luveka Plastics ♻️</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li class="submenu">
+          <a href="#servicios">Servicios ▾</a>
+          <ul class="submenu-items">
+            <li><a href="compras.html">Compra</a></li>
+            <li><a href="#">Venta</a></li>
+            <li><a href="reciclaje.html">Reciclaje</a></li>
+          </ul>
+        </li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+</header>
+
+<!-- Hero Reciclaje con video -->
+<section class="hero-reciclaje">
+  <video autoplay muted loop class="hero-video">
+    <source src="img/maquina2.mp4" type="video/mp4">
+    Tu navegador no soporta videos.
+  </video>
+  <div class="overlay"></div>
+  <div class="hero-content">
+    <h1>Reciclaje y Maquila</h1>
+    <p>Transformamos plásticos en nuevos recursos mediante procesos especializados.</p>
+  </div>
+</section>
+
+<!-- Sección Servicios de Maquila -->
+<section class="servicios-maquila">
+  <div class="container">
+    <h2>Nuestros Servicios de Maquila</h2>
+    <p>Ofrecemos soluciones integrales de reciclaje que optimizan los residuos plásticos y generan valor agregado para tu industria.</p>
+    
+    <div class="grid-servicios">
+      <div class="servicio-card">
+        <img src="#" alt="Moler material plástico">
+        <h3>Triturado.</h3>
+        <p>Reducimos grandes volúmenes de plástico en partículas manejables, facilitando su transporte y reciclaje.</p>
+      </div>
+
+      <div class="servicio-card">
+        <img src="#" alt="Trituración de plásticos">
+        <h3>Molienda.</h3>
+        <p>Transformamos piezas plásticas en material molido uniforme, listo para ser reprocesado de manera eficiente.</p>
+      </div>
+
+      <div class="servicio-card">
+        <img src="#" alt="Peletizado de plásticos">
+        <h3>Peletizado.</h3>
+        <p>Convertimos los plásticos reciclados en pellets de alta calidad, listos para su reutilización industrial.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Botón flotante WhatsApp con opciones -->
+<div class="whatsapp-float-container">
+  <div class="whatsapp-main" onclick="toggleWhatsAppMenu()">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+  </div>
+  <div class="whatsapp-options">
+    <a href="https://wa.me/524424139226?text=Hola,%20quiero%20información%20de%20ventas" target="_blank">Ventas</a>
+    <a href="https://wa.me/524424449671" target="_blank">Compras</a>
+  </div>
+</div>
+  <!-- Footer -->
+<footer>
+    <p>&copy; 2025 Luveka Plastics · Todos los derechos reservados</p>
+</footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

@@ -627,7 +627,6 @@ form button:hover {
   font-size: 1.2rem;
   line-height: 1.6;
 }
-
 /* Sección Cards Productos */
 .productos {
   padding: 60px 20px;
@@ -725,7 +724,6 @@ form button:hover {
   font-size: 1.2rem;
   line-height: 1.6;
 }
-
 /* Materiales en Venta */
 .materiales-venta {
   padding: 60px 50px;
@@ -774,26 +772,224 @@ form button:hover {
 }
 
 
+/* ///// PAGINA RECICLAJE //////*/
+/* Hero Reciclaje */
+.hero-reciclaje {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Ajusta la altura según necesites */
+  overflow: hidden;
+}
+.hero-reciclaje .hero-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: 0;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+}
+.hero-reciclaje .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5); /* Ajusta opacidad/color del overlay */
+  z-index: 1;
+}
+.hero-reciclaje .hero-content {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  text-align: center;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 0 20px;
+}
+.hero-reciclaje h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.hero-reciclaje p {
+  font-size: 1.5rem;
+  line-height: 1.6;
+}
+
+/* Servicios Maquila */
+/* Contenedor principal */
+.servicios-maquila {
+  padding: 60px 20px;
+  background-color: #f9f9f9;
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+}
+
+.servicios-maquila h2 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  color: #222;
+}
+
+.servicios-maquila p {
+  font-size: 1.1rem;
+  color: #555;
+  max-width: 700px;
+  margin: 0 auto 40px auto;
+  line-height: 1.6;
+}
+
+/* Grid de servicios */
+.grid-servicios {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  align-items: stretch;
+}
+
+/* Card individual */
+.servicio-card {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  padding: 30px 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.servicio-card img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  margin-bottom: 20px;
+}
+
+.servicio-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #111;
+}
+
+.servicio-card p {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.5;
+}
+
+/* Efecto hover */
+.servicio-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .servicios-maquila h2 {
+    font-size: 2rem;
+  }
+
+  .servicios-maquila p {
+    font-size: 1rem;
+  }
+}
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/*///////// PAGINA CONTACTO ////////*/
+/* Estilos formulario reciclaje */
+.form-contacto {
+  padding: 110px 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  border-radius: 12px;
+  text-align: center;
+}
+.form-contacto h2 {
+  color: var(--color-secundario);
+  font-size: 2.4rem;
+  margin-bottom: 10px;
+}
+.form-contacto p {
+  color: #555;
+  margin-bottom: 30px;
+}
+.form-contacto input,
+.form-contacto select,
+.form-contacto textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+.form-contacto button {
+  padding: 15px 25px;
+  font-size: 1.1rem;
+  background: #368138;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.form-contacto button:hover {
+  background: #45a049;
+}
+/* Contenedor flotante */
+.whatsapp-float-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+/* Botón principal */
+.whatsapp-main {
+  width: 60px;
+  height: 60px;
+  background: #25d366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+.whatsapp-main:hover {
+  transform: scale(1.1);
+}
+.whatsapp-main img {
+  width: 35px;
+  height: 35px;
+}
+/* Opciones desplegables */
+.whatsapp-options {
+  display: none; /* Oculto por defecto */
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+.whatsapp-options a {
+  background: #128c7e;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 8px;
+  text-decoration: none;
+  margin-top: 8px;
+  font-weight: bold;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+  transition: background 0.3s;
+}
+.whatsapp-options a:hover {
+  background: #075e54;
+}
 /* Footer */
 footer {
   background: #111;
@@ -801,6 +997,7 @@ footer {
   text-align: center;
   padding: 2rem;
 }
+
 
 
 /* Responsive */

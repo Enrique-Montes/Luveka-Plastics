@@ -56,3 +56,10 @@ setInterval(() => {
   currentSlide = (currentSlide + 1) % slides.length;
   updateCarousel();
 }, 5000);
+
+
+// Función para mostrar/ocultar opciones
+function toggleWhatsAppMenu() {
+  const menu = document.querySelector('.whatsapp-options');
+  menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
+}
