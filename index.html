@@ -12,19 +12,27 @@
   <header>
     <div class="logo">♻️ Luveka Plastics ♻️</div>
     <nav>
-      <ul>
-        <li><a href="#">Inicio</a></li>
-        <li><a href="nosotros.html">Nosotros</a></li>
-        <li class="submenu">
-          <a href="#servicios">Servicios ▾</a>
-          <ul class="submenu-items">
-              <li><a href="compras.html">Compra</a></li>
-              <li><a href="ventas.html">Venta</a></li>
-              <li><a href="reciclaje.html">Reciclaje</a></li>
-          </ul>
-        </li>
-        <li><a href="contacto.html">Contacto</a></li>
-      </ul>
+      <!-- Botón hamburguesa -->
+    <button class="hamburger" aria-label="Abrir menú">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+
+    <ul class="nav-links">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="nosotros.html">Nosotros</a></li>
+
+      <li class="submenu-item">
+        <a href="servicios.html">Servicios ▾</a>
+        <ul class="submenu">
+          <li><a href="compras.html">Compras</a></li>
+          <li><a href="ventas.html">Ventas</a></li>
+          <li><a href="reciclaje.html">Reciclaje</a></li>
+        </ul>
+      </li>
+
+      <li><a href="contacto.html">Contacto</a></li>
     </nav>
   </header>
 
@@ -47,28 +55,28 @@
       <div class="icono">💼</div>
       <h3>Venta</h3>
       <p>Asimismo, ofrecemos la venta de materiales en diferentes presentaciones: purgas, piezas, molidos y peletizados.</p>
-      <a href="#" class="btn-pro">Conocer más</a>
+      <!--<a href="#" class="btn-pro">Conocer más</a>-->
     </div>
 
     <div class="servicio">
       <div class="icono">♻️</div>
       <h3>Reciclaje</h3>
       <p>Nos enfocamos en el reciclaje de plásticos, transformando residuos en materiales de calidad para reincorporarlos a la cadena productiva.</p>
-      <a href="#" class="btn-pro">Conocer más</a>
+      <!--<a href="#" class="btn-pro">Conocer más</a>-->
     </div>
 
     <div class="servicio">
       <div class="icono">🛒</div>
       <h3>Compra</h3>
       <p>Adquirimos todo tipo de material en diversas presentaciones: piezas, purgas, coladas, molido, peletizado, resina virgen e inventarios obsoletos.</p>
-      <a href="#" class="btn-pro">Conocer más</a>
+      <!--<a href="#" class="btn-pro">Conocer más</a>-->
     </div>
 
     <div class="servicio">
       <div class="icono">🌍</div>
       <h3>Compromiso</h3>
       <p>Asumimos el compromiso de proteger el medio ambiente mediante procesos sostenibles que reducen el impacto ecológico.</p>
-      <a href="#" class="btn-pro">Conocer más</a>
+      <!--a href="#" class="btn-pro">Conocer más</!--a>-->
     </div>
 
   </div>
@@ -76,7 +84,7 @@
 
 <!-- 360 Recycling -->
 <section id="recycling360" class="section fade-in recycling360">
-  <h2>Economia Circular</h2>
+  <h2>Economía Circular</h2>
   <p>En <strong>Luveka Plastics</strong> trabajamos para garantizar el reciclaje total del plástico. Apostamos por la economía circular como alternativa a la lineal, reutilizando materiales, reduciendo el consumo energético y diseñando productos que puedan rehacerse con el uso de energías renovables.</p>
 
   <div class="carousel" aria-live="polite">
@@ -139,20 +147,20 @@
 
   <!-- Contacto -->
   <section id="contacto" class="section fade-in">
-    <h2>Contactanos</h2>
+    <h2>Contáctanos</h2>
     <form id="contactForm">
-      <input type="text" placeholder="Nombre" required>
-      <input type="email" placeholder="Email" required>
-      <input type="tel" placeholder="Telefono" required>
+      <input type="text" placeholder="Tu Nombre" required>
+      <input type="email" placeholder="Tu Email" required>
+      <input type="tel" placeholder="Teléfono" required>
       <select>
             <option disabled selected>-- Seleccione un asunto --</option>
             <option>Quiero Comprar</option>
             <option>Quiero Vender</option>
+            <option>Informes Maquila</option>
         </select>
       <button type="submit">Enviar</button>
     </form>
   </section>
-
 
   <!-- Botón flotante WhatsApp con opciones -->
 <div class="whatsapp-float-container">

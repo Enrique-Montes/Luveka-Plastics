@@ -10,24 +10,32 @@
 <body>
 
   <!-- Header -->
-<header>
+  <header>
     <div class="logo">♻️ Luveka Plastics ♻️</div>
     <nav>
-      <ul>
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="nosotros.html">Nosotros</a></li>
-        <li class="submenu">
-          <a href="#servicios">Servicios ▾</a>
-          <ul class="submenu-items">
-            <li><a href="compras.html">Compra</a></li>
-            <li><a href="#">Venta</a></li>
-            <li><a href="reciclaje.html">Reciclaje</a></li>
-          </ul>
-        </li>
-        <li><a href="contacto.html">Contacto</a></li>
-      </ul>
+      <!-- Botón hamburguesa -->
+    <button class="hamburger" aria-label="Abrir menú">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+
+    <ul class="nav-links">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="nosotros.html">Nosotros</a></li>
+
+      <li class="submenu-item">
+        <a href="servicios.html">Servicios ▾</a>
+        <ul class="submenu">
+          <li><a href="compras.html">Compras</a></li>
+          <li><a href="ventas.html">Ventas</a></li>
+          <li><a href="reciclaje.html">Reciclaje</a></li>
+        </ul>
+      </li>
+
+      <li><a href="contacto.html">Contacto</a></li>
     </nav>
-</header>
+  </header>
 
 <!-- Hero Reciclaje con video -->
 <section class="hero-reciclaje">
@@ -50,26 +58,25 @@
     
     <div class="grid-servicios">
       <div class="servicio-card">
-        <img src="#" alt="Moler material plástico">
+        <img src="img/trituradora.png" alt="">
         <h3>Triturado.</h3>
         <p>Reducimos grandes volúmenes de plástico en partículas manejables, facilitando su transporte y reciclaje.</p>
       </div>
 
       <div class="servicio-card">
-        <img src="#" alt="Trituración de plásticos">
+        <img src="img/molino.jpg" alt="">
         <h3>Molienda.</h3>
         <p>Transformamos piezas plásticas en material molido uniforme, listo para ser reprocesado de manera eficiente.</p>
       </div>
 
       <div class="servicio-card">
-        <img src="#" alt="Peletizado de plásticos">
+        <img src="img/peletizadora.jpg" alt="Peletizado de plásticos">
         <h3>Peletizado.</h3>
         <p>Convertimos los plásticos reciclados en pellets de alta calidad, listos para su reutilización industrial.</p>
       </div>
     </div>
   </div>
 </section>
-
 
 <!-- Botón flotante WhatsApp con opciones -->
 <div class="whatsapp-float-container">

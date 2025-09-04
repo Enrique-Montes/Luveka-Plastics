@@ -8,32 +8,44 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-     <!-- Header -->
+  <!-- Header -->
   <header>
     <div class="logo">♻️ Luveka Plastics ♻️</div>
     <nav>
-      <ul>
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="nosotros.html">Nosotros</a></li>
-        <li class="submenu">
-          <a href="#servicios">Servicios ▾</a>
-          <ul class="submenu-items">
-            <li><a href="compras.html">Compra</a></li>
-            <li><a href="#">Venta</a></li>
-            <li><a href="reciclaje.html">Reciclaje</a></li>
-          </ul>
-        </li>
-        <li><a href="contacto.html">Contacto</a></li>
-      </ul>
+      <!-- Botón hamburguesa -->
+    <button class="hamburger" aria-label="Abrir menú">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+
+    <ul class="nav-links">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="nosotros.html">Nosotros</a></li>
+
+      <li class="submenu-item">
+        <a href="servicios.html">Servicios ▾</a>
+        <ul class="submenu">
+          <li><a href="compras.html">Compras</a></li>
+          <li><a href="ventas.html">Ventas</a></li>
+          <li><a href="reciclaje.html">Reciclaje</a></li>
+        </ul>
+      </li>
+
+      <li><a href="contacto.html">Contacto</a></li>
     </nav>
   </header>
 
-  <!-- Hero Ventas -->
-<section class="hero-ventas">
+  <!-- Hero Reciclaje con video -->
+<section class="hero-reciclaje">
+  <video autoplay muted loop class="hero-video">
+    <source src="img/maquina1.mp4" type="video/mp4">
+    Tu navegador no soporta videos.
+  </video>
   <div class="overlay"></div>
   <div class="hero-content">
-    <h1>Venta de Materiales</h1>
-    <p>Ofrecemos plásticos reciclados y procesados en diferentes presentaciones, listos para su transformación.</p>
+    <h1>Reciclaje y Maquila</h1>
+    <p>Transformamos plásticos en nuevos recursos mediante procesos especializados.</p>
   </div>
 </section>
 
@@ -45,40 +57,43 @@
     
     <div class="grid-materiales">
       <div class="card">
-        <img src="https://images.pexels.com/photos/373543/pexels-photo-373543.jpeg" alt="Molido">
+        <img src="img/molido2.avif" alt="Molido">
         <h3>Molido</h3>
         <p>Plástico molido, limpio y listo para extrusión o inyección.</p>
       </div>
 
       <div class="card">
-        <img src="https://images.pexels.com/photos/3735432/pexels-photo-3735432.jpeg" alt="Peletizado">
+        <img src="img/triturado.webp" alt="Triturado">
+        <h3>Triturado</h3>
+        <p>Plástico triturado.</p>
+      </div>
+
+      <div class="card">
+        <img src="img/pp_pelet.jpg" alt="Peletizado">
         <h3>Peletizado</h3>
         <p>Resina reciclada en pellets para un uso más eficiente en procesos.</p>
       </div>
 
       <div class="card">
-        <img src="https://images.pexels.com/photos/3735246/pexels-photo-3735246.jpeg" alt="Purgas">
+        <img src="img/purga.jpg" alt="Purgas">
         <h3>Purgas</h3>
         <p>Diversos materiales en presentación de purgas para reprocesar.</p>
       </div>
 
       <div class="card">
-        <img src="https://images.pexels.com/photos/542268/pexels-photo-542268.jpeg" alt="Piezas">
-        <h3>Piezas</h3>
-        <p>Residuos plásticos en piezas, ideales para molienda y reciclaje.</p>
+        <img src="img/coladas.jpg" alt="Piezas">
+        <h3>Coladas</h3>
+        <p>Residuos plásticos en coladas, ideales para molienda y reciclaje.</p>
       </div>
 
       <div class="card">
-        <img src="https://images.pexels.com/photos/542268/pexels-photo-542268.jpeg" alt="Piezas">
+        <img src="img/tarima.webp" alt="Piezas">
         <h3>Tarimas</h3>
         <p>Residuos plásticos en piezas, ideales para molienda y reciclaje.</p>
       </div>
     </div>
   </div>
 </section>
-
-
-
 
 <!-- Botón flotante WhatsApp con opciones -->
 <div class="whatsapp-float-container">

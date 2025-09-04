@@ -96,6 +96,95 @@ header nav a:hover {
   color: green;
 }
 
+/* Ocultar el menú en móvil por defecto */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+.nav-links li {
+  position: relative;
+}
+.submenu {
+  display: none;
+  position: absolute;
+  background: rgba(253, 253, 253, 0.9);
+  top: 100%;
+  left: 0;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+  list-style: none;
+  padding: 0.5rem 0;
+  min-width: 160px;
+  z-index: 10;
+}
+.submenu li {
+  padding: 0.5rem 1rem;
+}
+.submenu-item:hover > .submenu {
+  display: block;
+}
+/* Botón hamburguesa */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+  z-index: 1100;
+}
+.hamburger .bar {
+  width: 35px;
+  height: 6px;
+  background-color: #ffffff;
+  margin: 4px 0;
+  transition: 0.3s;
+}
+
+/* Responsive menu hamburguesa */
+@media screen and (max-width: 768px) {
+  header .logo {
+    font-size: 22px;
+  }
+  .nav-links li a{
+    text-transform: uppercase;
+    color: #004d40;
+    font-weight: 800;
+  }
+  .hamburger{
+    display: flex;
+  }
+  .nav-links {
+    text-decoration: none;
+    position: fixed;
+    top: 80px; 
+    right: -100%;
+    height: 35vh;
+    width: 200px;
+    background-color: rgba(255, 255, 255, 0.553);
+    flex-direction: column;
+    padding-top: 1rem;
+    gap: 2rem;
+    transition: right 0.3s ease-in-out;
+    box-shadow: 2px 0 5px rgba(0,0,0,1);
+  }
+  .nav-links.active {
+    right: 0;
+  }
+  /* Submenús en móvil */
+  .submenu {
+    position: static;
+    box-shadow: none;
+    padding-left: 1rem;
+  }
+  .nav-links .submenu li a{
+    color: #004d40;
+  }
+  .submenu-item:hover > .submenu,
+  .submenu-item:focus-within > .submenu {
+    display: block;
+  }
+}
 
 /* Hero */
 .hero {
@@ -126,21 +215,6 @@ header nav a:hover {
   font-size: 24px;
   letter-spacing: 2px;
 }
-/*.btn {
-  display: inline-block;
-  margin-top: 1rem;
-  padding: 0.8rem 2rem;
-  background: #00d084;
-  color: white;
-  text-decoration: none;
-  border-radius: 30px;
-  transition: background 0.3s;
-}
-.btn:hover {
-  background: #00a86b;
-}*/
-
-
 /* Cards de servicios / incio */
 .servicios-pro {
   padding: 5rem 8%;
@@ -150,6 +224,7 @@ header nav a:hover {
 .servicios-pro h2 {
   font-size: 2.2rem;
   margin-bottom: 3rem;
+  color: var(--color-secundario);
 }
 .servicios-grid {
   display: grid;
@@ -179,6 +254,7 @@ header nav a:hover {
   text-align: center;
 }
 .recycling360 h2 {
+  color: var(--color-secundario);
   font-size: 2.2rem;
   margin-bottom: 16px;
   letter-spacing: 2px;
@@ -254,7 +330,7 @@ header nav a:hover {
   cursor: pointer;
 }
 .dots button[aria-selected="true"] {
-  background: #2c7a4b;
+  background: #2c7a43;
   transform: scale(1.15);
 }
 
@@ -262,7 +338,7 @@ header nav a:hover {
 #recycling360 { scroll-margin-top: 90px; }
 
 
-/* Nuestros Servicios Cards */
+/* Nuestros Servicios Cards 
 .servicio h3 {
   font-size: 1.4rem;
   margin-bottom: 0.8rem;
@@ -286,7 +362,12 @@ header nav a:hover {
 .btn-pro:hover {
   background: #008f5a;
 }
+  
 /* Contacto */
+#contacto h2 {
+  color: var(--color-secundario);
+  font-size: 40px;
+}
 form {
   max-width: 500px;
   margin: auto;
@@ -297,7 +378,7 @@ form {
 form input, form textarea {
   padding: 1rem;
   border-radius: 8px;
-  border: 1px solid #ccc;
+  border: 3px solid #139326;
 }
 form button {
   padding: 1rem;
@@ -337,7 +418,7 @@ form button:hover {
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(46, 139, 87, 0.6); /* verde semitransparente */
+  background: rgba( 0, 0, 0, 0.7);
   z-index: 2;
 }
 .hero-video .hero-content {
@@ -440,6 +521,56 @@ form button:hover {
 }
 .card:hover {
   transform: translateY(-15px);
+}
+
+/* Tablets */
+@media (max-width: 992px) {
+  .historia .container {
+    flex-direction: column;
+    text-align: center;
+    padding: 30px 20px;
+  }
+  .historia .text h2 {
+    font-size: 1.8rem;
+  }
+  .section.historia .image img {
+    width: 280px;
+    height: 280px;
+  }
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas */
+    gap: 1.5rem;
+    justify-items: center;
+  }
+  .card h3 {
+    color: var(--color-secundario);
+  }
+}
+/* Móviles */
+@media (max-width: 600px) {
+  .historia .container {
+    gap: 20px;
+  }
+  .historia .text h2 {
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+  }
+  .historia .text p {
+    font-size: 0.9rem;
+  }
+  .section.historia .image img {
+    width: 220px;
+    height: 220px;
+  }
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .card h3 {
+    font-size: 20px;
+    color: var(--color-secundario);
+  }
 }
 
 /* Sección Responsabilidad Ambiental */
@@ -733,7 +864,7 @@ form button:hover {
 .materiales-venta h2 {
   font-size: 2.5rem;
   margin-bottom: 10px;
-  color: #333;
+  color: var(--color-secundario);
 }
 .materiales-venta p {
   font-size: 1.1rem;
@@ -825,17 +956,14 @@ form button:hover {
 /* Contenedor principal */
 .servicios-maquila {
   padding: 60px 20px;
-  background-color: #f9f9f9;
   text-align: center;
   font-family: 'Arial', sans-serif;
 }
-
 .servicios-maquila h2 {
   font-size: 2.5rem;
   margin-bottom: 15px;
-  color: #222;
+  color: var(--color-secundario);
 }
-
 .servicios-maquila p {
   font-size: 1.1rem;
   color: #555;
@@ -843,7 +971,6 @@ form button:hover {
   margin: 0 auto 40px auto;
   line-height: 1.6;
 }
-
 /* Grid de servicios */
 .grid-servicios {
   display: grid;
@@ -851,35 +978,30 @@ form button:hover {
   gap: 30px;
   align-items: stretch;
 }
-
 /* Card individual */
 .servicio-card {
   background-color: #fff;
   border-radius: 12px;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
   padding: 30px 20px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
 .servicio-card img {
-  width: 80px;
-  height: 80px;
+  width: 200px;
+  height: 200px;
   object-fit: contain;
   margin-bottom: 20px;
 }
-
 .servicio-card h3 {
   font-size: 1.5rem;
   margin-bottom: 15px;
-  color: #111;
+  color: #111111;
 }
-
 .servicio-card p {
   font-size: 1rem;
   color: #666;
   line-height: 1.5;
 }
-
 /* Efecto hover */
 .servicio-card:hover {
   transform: translateY(-8px);
@@ -923,7 +1045,7 @@ form button:hover {
   padding: 12px;
   margin-bottom: 15px;
   border-radius: 8px;
-  border: 1px solid #ccc;
+  border: 3px solid #2f9426;
   font-size: 1rem;
   box-sizing: border-box;
 }
